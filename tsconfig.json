@@ -1,0 +1,19 @@
+{
+  "include": ["src/**/*", "./types.d.ts"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "target": "ES5", // 指定ECMAScript目标版本
+    "module": "esnext", // 指定生成哪个模块系统代码
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": true,
+    "jsx": "react", // 支持react
+    "outDir": "./dist",
+    "removeComments": true, // 删除注释
+    "strict": true,
+    "baseUrl": "./",
+    "esModuleInterop": true, // 允许export=导出，由import from 导入
+    "skipLibCheck": true, // 跳过声明文件的类型检查
+    "forceConsistentCasingInFileNames": true, //强制使用大小写一致的名称
+    "moduleResolution": "Node" // 模块解析策略，ts默认用node的解析策略，即相对的方式导入
+  }
+}

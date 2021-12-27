@@ -1,0 +1,8 @@
+.iponeX-fixed(@extraDistance:0px, @prototype: padding-bottom) {
+  @{prototype}: calc(
+    @extraDistance + constant(safe-area-inset-bottom)
+  ) !important; // 兼容ios <= 11.2
+  @{prototype}: calc(
+    @extraDistance + env(safe-area-inset-bottom)
+  ) !important; // 兼容ios >= 11.2
+}
